@@ -1,0 +1,12 @@
+MANIFEST-house.txt
+
+Fonts in this work, renamed from New Computer Modern 8.1.1 as the GUST Font
+License requests:
+
+  House Book          house-book.woff2          from NewCM10-Book.otf
+  House Sans          house-sans.woff2          from NewCMSans10-Book.otf
+  House Typewriter    house-typewriter.woff2    from NewCMMono10-Book.otf
+
+Accompanying file:
+
+  README-house.txt    the changes, the original, and support

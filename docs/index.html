@@ -9,7 +9,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://wevibe.fyi">
 <meta name="description" content="a programming language where the only token is the word vibe">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231a0a1e' width='100' height='100' rx='12'/><text x='50' y='68' text-anchor='middle' font-size='60' font-family='monospace' fill='%23ff6ec7'>~</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23180b20' width='100' height='100' rx='12'/><text x='50' y='68' text-anchor='middle' font-size='60' font-family='monospace' fill='%23ff6bb1'>~</text></svg>">
 <style>
 @font-face {
   font-family: 'JuliaMono';
@@ -25,8 +25,8 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  background: #1a0a1e;
-  color: #f0dce8;
+  background: oklch(0.180 0.046 310.6);
+  color: oklch(0.914 0.027 355.2);
   font-family: 'JuliaMono', 'SF Mono', 'Cascadia Code', 'Fira Code', monospace;
   min-height: 100vh;
   overflow-x: hidden;
@@ -41,13 +41,13 @@ body::before {
       0deg,
       transparent,
       transparent 2px,
-      rgba(255,110,199,0.015) 2px,
-      rgba(255,110,199,0.015) 4px
+      oklch(0.741 0.200 355.2 / 0.015) 2px,
+      oklch(0.741 0.200 355.2 / 0.015) 4px
     ),
     linear-gradient(180deg,
-      rgba(255,0,128,0.04) 0%,
+      oklch(0.645 0.260 355.2 / 0.04) 0%,
       transparent 40%,
-      rgba(255,110,199,0.06) 100%);
+      oklch(0.741 0.200 355.2 / 0.06) 100%);
   pointer-events: none;
   z-index: 0;
 }
@@ -63,7 +63,7 @@ body::before {
 h1 {
   font-size: 4rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #ff6ec7, #ff9de2, #ffb3d9);
+  background: linear-gradient(135deg, oklch(0.741 0.200 355.2), oklch(0.817 0.143 355.2), oklch(0.849 0.100 355.2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -72,14 +72,14 @@ h1 {
 }
 
 .tagline {
-  color: #ff6ec7;
+  color: oklch(0.741 0.200 355.2);
   font-size: 0.9rem;
   margin-bottom: 3rem;
   opacity: 0.8;
 }
 
 h2 {
-  color: #ff9de2;
+  color: oklch(0.817 0.143 355.2);
   font-size: 1.1rem;
   margin: 2.5rem 0 1rem;
   letter-spacing: 0.05em;
@@ -94,7 +94,7 @@ p { margin-bottom: 1rem; }
 
 .opcodes {
   background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,110,199,0.2);
+  border: 1px solid oklch(0.741 0.200 355.2 / 0.2);
   border-radius: 4px;
   padding: 1rem 1.5rem;
   margin: 1.5rem 0;
@@ -103,11 +103,11 @@ p { margin-bottom: 1rem; }
 }
 
 .opcodes .op {
-  color: #ff9de2;
+  color: oklch(0.817 0.143 355.2);
 }
 
 .opcodes .range {
-  color: #ff6ec7;
+  color: oklch(0.741 0.200 355.2);
   display: inline-block;
   min-width: 7ch;
 }
@@ -125,14 +125,14 @@ p { margin-bottom: 1rem; }
 
 .editor-label span {
   font-size: 0.75rem;
-  color: #ff6ec7;
+  color: oklch(0.741 0.200 355.2);
   letter-spacing: 0.05em;
 }
 
 #examples {
   background: transparent;
-  border: 1px solid rgba(255,110,199,0.3);
-  color: #f0dce8;
+  border: 1px solid oklch(0.741 0.200 355.2 / 0.3);
+  color: oklch(0.914 0.027 355.2);
   font-family: 'JuliaMono', 'SF Mono', 'Cascadia Code', 'Fira Code', monospace;
   font-size: 0.75rem;
   padding: 0.3rem 0.5rem;
@@ -141,16 +141,16 @@ p { margin-bottom: 1rem; }
 }
 
 #examples option {
-  background: #1a0a1e;
+  background: oklch(0.180 0.046 310.6);
 }
 
 textarea {
   width: 100%;
   height: 300px;
   background: rgba(0,0,0,0.3);
-  border: 1px solid rgba(255,110,199,0.2);
+  border: 1px solid oklch(0.741 0.200 355.2 / 0.2);
   border-radius: 4px;
-  color: #f0dce8;
+  color: oklch(0.914 0.027 355.2);
   font-family: 'JuliaMono', 'SF Mono', 'Cascadia Code', 'Fira Code', monospace;
   font-size: 0.8rem;
   padding: 1rem;
@@ -160,8 +160,8 @@ textarea {
 
 textarea:focus {
   outline: none;
-  border-color: #ff6ec7;
-  box-shadow: 0 0 20px rgba(255,110,199,0.1);
+  border-color: oklch(0.741 0.200 355.2);
+  box-shadow: 0 0 20px oklch(0.741 0.200 355.2 / 0.1);
 }
 
 .buttons {
@@ -171,7 +171,7 @@ textarea:focus {
 }
 
 button {
-  background: linear-gradient(135deg, #ff6ec7, #ff9de2);
+  background: linear-gradient(135deg, oklch(0.741 0.200 355.2), oklch(0.817 0.143 355.2));
   border: none;
   color: white;
   font-family: 'JuliaMono', 'SF Mono', 'Cascadia Code', 'Fira Code', monospace;
@@ -187,19 +187,19 @@ button:hover { opacity: 0.85; }
 
 button.secondary {
   background: transparent;
-  border: 1px solid rgba(255,110,199,0.3);
-  color: #ff6ec7;
+  border: 1px solid oklch(0.741 0.200 355.2 / 0.3);
+  color: oklch(0.741 0.200 355.2);
 }
 
 #output {
   background: rgba(0,0,0,0.4);
-  border: 1px solid rgba(255,157,226,0.15);
+  border: 1px solid oklch(0.817 0.143 355.2 / 0.15);
   border-radius: 4px;
   padding: 1rem;
   font-size: 0.8rem;
   min-height: 3rem;
   white-space: pre-wrap;
-  color: #ff9de2;
+  color: oklch(0.817 0.143 355.2);
   margin-top: 1rem;
 }
 
@@ -208,26 +208,26 @@ button.secondary {
 }
 
 .download a {
-  color: #ff6ec7;
+  color: oklch(0.741 0.200 355.2);
   text-decoration: none;
-  border-bottom: 1px solid rgba(255,110,199,0.3);
+  border-bottom: 1px solid oklch(0.741 0.200 355.2 / 0.3);
   transition: border-color 0.2s;
 }
 
 .download a:hover {
-  border-color: #ff6ec7;
+  border-color: oklch(0.741 0.200 355.2);
 }
 
 .footer {
   margin-top: 4rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255,110,199,0.1);
+  border-top: 1px solid oklch(0.741 0.200 355.2 / 0.1);
   font-size: 0.7rem;
-  color: rgba(240,220,232,0.3);
+  color: oklch(0.914 0.027 355.2 / 0.3);
 }
 
 .footer a {
-  color: rgba(240,220,232,0.4);
+  color: oklch(0.914 0.027 355.2 / 0.4);
   text-decoration: none;
 }
 
@@ -240,14 +240,14 @@ button.secondary {
 }
 
 .poem-text {
-  color: rgba(240,220,232,0.5);
+  color: oklch(0.914 0.027 355.2 / 0.5);
   font-size: 0.8rem;
   font-style: italic;
   margin-bottom: 0.3rem;
 }
 
 .poem-vibes {
-  color: #ff6ec7;
+  color: oklch(0.741 0.200 355.2);
   font-size: 0.7rem;
   margin-bottom: 0.6rem;
   word-break: break-all;
@@ -261,12 +261,12 @@ button.secondary {
 }
 
 .reveal-text {
-  color: rgba(240,220,232,0.4);
+  color: oklch(0.914 0.027 355.2 / 0.4);
   font-size: 0.85rem;
 }
 
 .reveal-text em {
-  color: #ff6ec7;
+  color: oklch(0.741 0.200 355.2);
   font-style: normal;
 }
 
@@ -275,8 +275,8 @@ button.secondary {
   bottom: 0; left: 0; right: 0;
   height: 60vh;
   background:
-    linear-gradient(rgba(255,110,199,0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,110,199,0.12) 1px, transparent 1px);
+    linear-gradient(oklch(0.741 0.200 355.2 / 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(0.741 0.200 355.2 / 0.12) 1px, transparent 1px);
   background-size: 50px 50px;
   transform: perspective(400px) rotateX(65deg);
   transform-origin: bottom;
@@ -293,8 +293,8 @@ button.secondary {
   height: 100%;
   background: linear-gradient(
     to top,
-    rgba(255,110,199,0.08) 0%,
-    rgba(255,60,150,0.04) 30%,
+    oklch(0.741 0.200 355.2 / 0.08) 0%,
+    oklch(0.675 0.238 355.2 / 0.04) 30%,
     transparent 100%
   );
   pointer-events: none;
@@ -310,14 +310,30 @@ button.secondary {
   border-radius: 50%;
   background: linear-gradient(
     to bottom,
-    #ff6ec7 0%,
-    #ff9de2 40%,
-    #ffb3d9 70%,
-    rgba(255,179,217,0) 100%
+    oklch(0.741 0.200 355.2) 0%,
+    oklch(0.817 0.143 355.2) 40%,
+    oklch(0.849 0.100 355.2) 70%,
+    oklch(0.849 0.100 355.2 / 0) 100%
   );
   opacity: 0.15;
   pointer-events: none;
   z-index: 0;
+}
+
+@font-face {
+  font-family: 'House Book';
+  src: url('house-book.woff2') format('woff2');
+  font-display: swap;
+}
+
+.by {
+  margin-top: 3rem;
+  text-align: right;
+  font: 0.8rem 'House Book', 'Iowan Old Style', Georgia, serif;
+}
+
+.by a {
+  color: oklch(0.741 0.200 355.2);
 }
 </style>
 </head>
@@ -468,6 +484,8 @@ halt</textarea>
   <p>just stop thinking</p>
 </div>
 
+<p class="by">by <a href="https://github.com/wevibefyi/vibes">bonchicbongenre</a></p>
+
 </div>
 
 <script>
@@ -603,7 +621,7 @@ function vibeNote(ascii, step) {
   osc.stop(startTime + 0.5);
 }
 
-// ambient pad -- clams casino, submerged cathedral
+// ambient pad -- clams casino, debussy under water
 let audioCtx = null;
 let audioPlaying = false;
 
