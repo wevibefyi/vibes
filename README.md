@@ -71,10 +71,14 @@ cc -std=c99 -o vibe vibe.c
 
 ## try it in the browser
 
-Open `site/index.html`. The interpreter runs client-side in JavaScript. Turn on sound and every EMIT becomes a note on a pentatonic scale.
+Open `docs/index.html`. The interpreter runs client-side in JavaScript. Turn on sound and every EMIT becomes a note on a pentatonic scale.
 
 ## why
 
 > "I said, 'dinosaurs look sad,' you said, 'just stop thinking'"
 >
 > -- Hollerado
+
+---
+
+by [bonchicbongenre](https://github.com/bonchicbongenre)
